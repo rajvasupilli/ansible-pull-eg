@@ -1,5 +1,7 @@
 - name: Change the working directory to somedir/ before executing the command
-    ansible.builtin.shell: install-docker.sh >> somelog.txt
+    hosts: localhost
+    tasks:
+      ansible.builtin.shell: install-docker.sh >> somelog.txt
 # - name: Copy script from local to remote machine
 #    hosts: localhost
 #    tasks:
