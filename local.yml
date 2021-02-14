@@ -3,13 +3,13 @@
   user: root
   
   tasks:
-    - name: Ensure directories are 0755
-      command: find ansible-code -type f -exec chmod 0755 {} \;
+#     - name: Ensure directories are 0755
+#       command: find ansible-code -type f -exec chmod 0755 {} \;
         
     - name: Change the working directory to somedir/ before executing the command
       ansible.builtin.shell: sh install-docker.sh >> somelog.txt
-      args:
-        chdir: ansible-code/
+#       args:
+#         chdir: ansible-code/
 # - name: Copy script from local to remote machine
 #    hosts: localhost
 #    tasks:
