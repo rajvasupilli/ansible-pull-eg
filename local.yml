@@ -4,8 +4,12 @@
   
   tasks:
     - name: Change the working directory to somedir/ before executing the command
-      ansible.builtin.shell: sh install-docker.sh >> somelog.txt
       cmd: chmod 755 local.yml
+      args:
+        chdir: ansible-code/
+        
+    - name: Change the working directory to somedir/ before executing the command
+      ansible.builtin.shell: sh install-docker.sh >> somelog.txt
       args:
         chdir: ansible-code/
 # - name: Copy script from local to remote machine
