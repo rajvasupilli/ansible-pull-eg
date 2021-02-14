@@ -1,0 +1,4 @@
+- name: Change the working directory to somedir/ before executing the command
+  ansible.builtin.shell: install-docker.sh >> somelog.txt
+  args:
+    chdir: ansible-pull-eg/
